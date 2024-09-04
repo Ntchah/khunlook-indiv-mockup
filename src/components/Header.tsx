@@ -1,5 +1,5 @@
 "use client"
-
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
@@ -15,19 +15,19 @@ export default function Header() {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
 
      return (
-          <header className='fixed top-0 left-0 right-0 z-50'>
-               <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+          <header>
+               <nav className="bg-white border-gray-200 px-4 shadow-2xl lg:px-6 py-2.5 dark:bg-gray-800">
                     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                         <a href="https://flowbite.com" className="flex items-center">
+                         <div className="flex items-center">
                               <img
-                                   src="https://flowbite.com/docs/images/logo.svg"
+                                   src="/img/baby.png"
                                    className="mr-3 h-6 sm:h-9"
-                                   alt="Flowbite Logo"
+                                   alt="baby-logo"
                               />
                               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                                   Flowbite
+                                   Khunlook
                               </span>
-                         </a>
+                         </div>
 
                          <div className="flex items-center lg:order-2">
                               {!isMenuOpen && (
